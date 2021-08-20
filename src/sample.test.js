@@ -1,3 +1,3 @@
-it("returns true", () => {
-  expect(true).toEqual(true)
-})
+it('returns true', () => {
+    expect(true).toEqual(true);
+});
