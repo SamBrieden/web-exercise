@@ -1,0 +1,24 @@
+@import "../shared_styles/colors.scss";
+
+.progress-bar-container {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    transition: opacity ease-in-out 300ms;
+}
+
+.progress-indicator {
+    display: flex;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, $sunrise 0%, $red 100%);
+}
+
+.progress-indicator-cover {
+    transition: width ease-in-out 15s;
+    position: absolute;
+    height: 6px;
+    width: 33%;
+    background: $gray-light;
+}
