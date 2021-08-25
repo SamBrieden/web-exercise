@@ -1,6 +1,6 @@
 import React from 'react';
 import Exercise from '../exercise/Exercise';
-import ProgressBar from './ProgressBar.js';
+import QuasiEnvironment from './QuasiEnvironment.js';
 
 const ProgressBarExercise = () => {
     return (
@@ -19,5 +19,5 @@ export default ProgressBarExercise;
 // ----------------------------------------------------------------------------------
 
 const Solution = () => {
-    return <ProgressBar />;
+    return <QuasiEnvironment />;
 };
