@@ -1,0 +1,45 @@
+@import "../shared_styles/colors.scss";
+@import "../shared_styles/typography.scss";
+
+.quasi-navbar {
+    border-radius: 10px 10px 0px 0px;
+    background: linear-gradient(135deg, $gray-medium 0%, $gray 100%);
+    height: 44px;
+}
+
+.request-module {
+    height: 450px;
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px;
+}
+
+.request-button {
+    box-sizing: border-box;
+    font-weight: 600;
+    height: 40px;
+    margin-right: 10px;
+    color: $green;
+    font-family: $standard-font;
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: solid $green;
+    border-width: 1px;
+    border-radius: 30px;
+}
+.request-button:hover {
+    border-width: 2px;
+}
+
+.terminate {
+    color: $red;
+    border: solid 1px $red;
+}
+
+.clicked {
+    border-width: 3px;
+    font-weight: 700;
+}
+.clicked:hover {
+    border-width: 3px;
+}
