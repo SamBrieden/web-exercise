@@ -4,6 +4,14 @@ import ProgressBar from './ProgressBar.js';
 
 export default function QuasiEnvironment() {
     const breakPoints = [20, 50, 70, 55, 33];
+    const [isLoading, setIsLoading] = useState(false);
+    const [isStartDisabled, disableStart] = useState(false);
+    const [isEndDisabled, disableEnd] = useState(true);
+    const [buttonCopy, setbuttonCopy] = useState('START REQUEST');
+    const [startClasses, setStartClasses] = useState('request-button');
+    const [terminateClasses, setTerminateClasses] = useState(
+        'terminate request-button disabled clicked'
+    );
 
     return (
         <>
