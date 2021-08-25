@@ -12,6 +12,31 @@ export default function QuasiEnvironment() {
     const [terminateClasses, setTerminateClasses] = useState(
         'terminate request-button disabled clicked'
     );
+    const handleRequestStart = () => {
+        disableStart(true);
+        disableEnd(false);
+        setStartClasses('request-button disabled clicked');
+        setTerminateClasses('request-button terminate');
+        setbuttonCopy('LOADING...');
+        setIsLoading(true);
+    };
+    const handleRequestTermination = () => {
+        disableEnd(true);
+        setbuttonCopy('START REQUEST');
+        setStartClasses('request-button');
+        setTerminateClasses('request-button terminate disabled clicked');
+        setIsLoading(false);
+    };
+
+    useEffect(() => {
+        let intervalID;
+        if (!isLoading) {
+            intervalID = setTimeout(() => {
+                disableStart(false);
+            }, 3000);
+        }
+        return () => clearTimeout(intervalID);
+    }, [isLoading]);
 
     return (
         <>
