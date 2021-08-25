@@ -18,6 +18,16 @@ export default function ProgressBar({ isLoading, breaks = [] }) {
         opacity: isLoading ? '100%' : '0%',
         transitionDelay: !isLoading ? '2700ms' : '0s',
     };
+    const handleLoading = useCallback(() => {
+        if (isLoading && !progress) {
+            if (timeoutID) clearTimeout(timeoutID);
+            handleNextBreakPoint(0);
+        } else if (!isLoading && progress) {
+            handleProgressTermination();
+        }
+    }, [isLoading, progress]);
+
+    useEffect(() => handleLoading(), [handleLoading]);
 
     return (
         <div className="progress-bar-container" style={showProgressBar}>
